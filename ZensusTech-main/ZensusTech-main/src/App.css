@@ -1,0 +1,254 @@
+/* ===================================================== */
+/*            TECHY BLUE + JAMIE STYLE THEME             */
+/*            CLOUD · SaaS · AI · ENTERPRISE             */
+/* ===================================================== */
+
+/* ------------------------------ */
+/*          THEME COLORS          */
+/* ------------------------------ */
+:root {
+  /* Techy blues */
+  --blue-dark: #0A0F28;  
+  --blue-tech: #0F1C3F;
+  --blue-neon: #4DA8FF;
+  --blue-electric: #2470FF;
+  --blue-glow: #7BC6FF;
+
+  /* Gradients */
+  --grad-blue-tech: linear-gradient(135deg, #081529, #0F2347 40%, #1C3C73 100%);
+  --grad-blue-neon: linear-gradient(135deg, #4DA8FF, #2470FF);
+  --grad-blue-cool: linear-gradient(135deg, #7BC6FF 0%, #4A90E2 100%);
+
+  /* Glass */
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.15);
+
+  /* Text */
+  --white: #FFFFFF;
+  --text-light: #EAF3FF;
+  --text-gray: #C9D6E8;
+
+  /* Global UI */
+  --radius: 18px;
+  --shadow-tech: 0 20px 60px rgba(36,112,255,0.25);
+}
+
+/* ===================================================== */
+/*                     GLOBAL STYLES                     */
+/* ===================================================== */
+
+body {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(80,140,255,0.25), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(36,112,255,0.20), transparent 45%),
+    var(--grad-blue-tech);
+  background-attachment: fixed;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.page {
+  padding: 2rem 1.75rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===================================================== */
+/*                       NAVBAR                          */
+/* ===================================================== */
+
+.navbar {
+  background: rgba(10,15,40,0.65);
+  backdrop-filter: blur(16px);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(100,150,255,0.18);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: var(--grad-blue-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a {
+  margin-left: 1.2rem;
+  color: var(--text-gray);
+  font-weight: 500;
+  padding-bottom: 3px;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--blue-neon);
+  border-bottom: 2px solid var(--blue-neon);
+}
+
+/* ===================================================== */
+/*                        HERO                            */
+/* ===================================================== */
+
+.hero {
+  background:
+    linear-gradient(135deg, rgba(36,112,255,0.25), rgba(10,15,40,0.85)),
+    url("https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  border-radius: var(--radius);
+  color: var(--white);
+  box-shadow: var(--shadow-tech);
+  border: 1px solid rgba(120,160,255,0.45);
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--white);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* Buttons */
+.primary-btn {
+  display: inline-flex;
+  padding: 0.9rem 1.6rem;
+  border-radius: 50px;
+  background: var(--grad-blue-neon);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(80,140,255,0.35);
+  text-decoration: none;
+  margin-top: 1.2rem;
+  transition: 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 45px rgba(80,140,255,0.5);
+}
+
+.secondary-link {
+  padding: 0.9rem 1.4rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  color: white;
+  margin-left: 1rem;
+  transition: 0.25s ease;
+}
+
+.secondary-link:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===================================================== */
+/*                     SECTIONS                          */
+/* ===================================================== */
+
+.section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  padding: 2.2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+}
+
+.section h1,
+.section h2 {
+  color: var(--blue-neon);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+/* ===================================================== */
+/*                   SERVICES GRID                       */
+/* ===================================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(80,140,255,0.25);
+  backdrop-filter: blur(14px);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue-neon);
+  box-shadow: 0 15px 50px rgba(36,112,255,0.45);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(36,112,255,0.15);
+  border: 1px solid rgba(36,112,255,0.35);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(36,112,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--blue-neon);
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blue-glow);
+  margin-bottom: 0.4rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+/* ===================================================== */
+/*                    CONTACT BOX                        */
+/* ===================================================== */
+
+.contact-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(80,140,255,0.25);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-left: 5px solid var(--blue-neon);
+}
+
+.contact-box a {
+  color: var(--blue-glow);
+  font-weight: 600;
+  text-decoration: none;
+}
